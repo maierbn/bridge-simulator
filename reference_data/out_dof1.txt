@@ -1,0 +1,50 @@
+
+---------- Input parameters ------------
+2 node_positions: [[0, 0], [1, 0]]
+1 elements: [[0, 1]]
+1 loads: [[2, 1]]
+3 fixed_dofs: [0, 1, 3]
+parameter EA =  10
+counting criterion:  3 + 1 - 2 * 2 = 0
+ -> statically determined (statisch bestimmt)
+
+id_matrix:
+[[0]
+ [1]
+ [2]
+ [3]]
+
+----- assemble global stiffness matrix from local matrices -----
+   - element  0 , angle  0.0 , length  1.0
+
+global stiffness matrix k_global:
+[[ 10.   0. -10.   0.]
+ [  0.   0.   0.   0.]
+ [-10.   0.  10.   0.]
+ [  0.   0.   0.   0.]]
+
+global right hand side load vector f:
+[[ 0.]
+ [ 0.]
+ [ 1.]
+ [ 0.]]
+
+----- reduce system by removing fixed dofs -----
+k_global_reduced:
+[[ 10.]]
+
+f reduced:
+[[ 1.]]
+
+----- solve system k*u = f for u -----
+number of nonfixed dofs:  1 , rank of stiffness matrix:  1
+(these numbers should be equal, otherwise the system is not statically determined)
+solution (u reduced):
+[[ 0.1]]
+
+----- recover full sized u by inserting 0's -----
+, u recovered:
+[ 0.   0.   0.1  0. ]
+
+----- plot -----
+Created file "out_dof1_el1_n2.png".
