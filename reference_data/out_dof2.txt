@@ -16,15 +16,15 @@ id_matrix:
 
 ----- assemble global stiffness matrix from local matrices -----
    - element  0 , angle  45.0 , length  2.82842712475
-   - element  1 , angle  146.309932474 , length  4.24264068712
+   - element  1 , angle  146.309932474 , length  3.60555127546
 
 global stiffness matrix k_global:
 [[ 1.76776695  1.76776695  0.          0.         -1.76776695 -1.76776695]
  [ 1.76776695  1.76776695  0.          0.         -1.76776695 -1.76776695]
- [ 0.          0.          1.63178488 -1.08785659 -1.63178488  1.08785659]
- [ 0.          0.         -1.08785659  0.72523772  1.08785659 -0.72523772]
- [-1.76776695 -1.76776695 -1.63178488  1.08785659  3.39955183  0.67991037]
- [-1.76776695 -1.76776695  1.08785659 -0.72523772  0.67991037  2.49300468]]
+ [ 0.          0.          1.92011606 -1.28007738 -1.92011606  1.28007738]
+ [ 0.          0.         -1.28007738  0.85338492  1.28007738 -0.85338492]
+ [-1.76776695 -1.76776695 -1.92011606  1.28007738  3.68788302  0.48768958]
+ [-1.76776695 -1.76776695  1.28007738 -0.85338492  0.48768958  2.62115187]]
 
 global right hand side load vector f:
 [[ 0. ]
@@ -36,8 +36,8 @@ global right hand side load vector f:
 
 ----- reduce system by removing fixed dofs -----
 k_global_reduced:
-[[ 3.39955183  0.67991037]
- [ 0.67991037  2.49300468]]
+[[ 3.68788302  0.48768958]
+ [ 0.48768958  2.62115187]]
 
 f reduced:
 [[ 1. ]
@@ -47,12 +47,12 @@ f reduced:
 number of nonfixed dofs:  2 , rank of stiffness matrix:  2
 (these numbers should be equal, otherwise the system is not statically determined)
 solution (u reduced):
-[[ 0.26870058]
- [ 0.12727922]]
+[[ 0.25213625]
+ [ 0.14384355]]
 
 ----- recover full sized u by inserting 0's -----
 , u recovered:
-[ 0.          0.          0.          0.          0.26870058  0.12727922]
+[ 0.          0.          0.          0.          0.25213625  0.14384355]
 
 ----- plot -----
 Created file "out_dof2_el2_n3.png".
