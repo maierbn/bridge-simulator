@@ -1,18 +1,21 @@
+Scenario 1
+==========
 
+======= function solve truss with 1 elements =======
 ---------- Input parameters ------------
-2 node_positions: [[0, 0], [1, 0]]
-1 elements: [[0, 1]]
-1 loads: [[2, 1]]
-3 fixed_dofs: [0, 1, 3]
-parameter EA =  10
-counting criterion:  3 + 1 - 2 * 2 = 0
- -> statically determined (statisch bestimmt)
+2 node_positions [x, y]:           [[0, 0], [1, 0]]
+1 elements [node start, node end]: [[0, 1]]
+1 loads [dof, value]:              [[2, 1]]
+3 fixed_dofs:                      [0, 1, 3]
+parameter EA = 10
 
 id_matrix:
 [[0]
  [1]
  [2]
  [3]]
+counting criterion:  3 + 1 - 2 * 2 = 0
+ -> statically determined (statisch bestimmt)
 
 ----- assemble global stiffness matrix from local matrices -----
    - element  0 , angle  0.0 , length  1.0
@@ -47,4 +50,4 @@ solution (u reduced):
 [ 0.   0.   0.1  0. ]
 
 ----- plot -----
-Created file "out_dof1_el1_n2.png".
+Created file "scenario_1_dof1_el1_n2.png".

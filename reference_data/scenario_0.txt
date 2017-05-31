@@ -1,18 +1,21 @@
+Scenario 0
+==========
 
+======= function solve truss with 2 elements =======
 ---------- Input parameters ------------
-3 node_positions: [[0, 0], [5, 0], [2, 2]]
-2 elements: [[0, 2], [1, 2]]
-2 loads: [[4, 1], [5, 0.5]]
-4 fixed_dofs: [0, 1, 2, 3]
-parameter EA =  10
-counting criterion:  4 + 2 - 2 * 3 = 0
- -> statically determined (statisch bestimmt)
+3 node_positions [x, y]:           [[0, 0], [5, 0], [2, 2]]
+2 elements [node start, node end]: [[0, 2], [1, 2]]
+2 loads [dof, value]:              [[4, 1], [5, 0.5]]
+4 fixed_dofs:                      [0, 1, 2, 3]
+parameter EA = 10
 
 id_matrix:
 [[0 2]
  [1 3]
  [4 4]
  [5 5]]
+counting criterion:  4 + 2 - 2 * 3 = 0
+ -> statically determined (statisch bestimmt)
 
 ----- assemble global stiffness matrix from local matrices -----
    - element  0 , angle  45.0 , length  2.82842712475
@@ -55,4 +58,4 @@ solution (u reduced):
 [ 0.          0.          0.          0.          0.25213625  0.14384355]
 
 ----- plot -----
-Created file "out_dof2_el2_n3.png".
+Created file "scenario_0_dof2_el2_n3.png".
